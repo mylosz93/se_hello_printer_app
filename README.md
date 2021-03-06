@@ -30,7 +30,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ PYTHONPATH=. FLASK_APP=hello_world flask run
   ```
 
-- Uruchamianie testów (see: http://doc.pytest.org/en/latest/capture.html):
+- Uruchamianie testów (see: http://doc.pytest.org/en/latest/capture.html):PYTHONPATH=. FLASK_APP=hello_world flask run
 
   ```
   $ PYTHONPATH=. py.test
@@ -39,7 +39,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
 
-  ```
+  ```PYTHONPATH=. py.test
   # deaktywacja
   $ deactivate
   ```
@@ -47,7 +47,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
