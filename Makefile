@@ -24,6 +24,7 @@ docker_run: docker_build
 	-p 5000:5000 \
 	-d hello-world-printer
 
+
 USERNAME=mylosz93
 TAG=$(USERNAME)/hello-world-printer
 
@@ -32,3 +33,6 @@ docker_push: docker_build
 	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
+
+test_smoke:
+	curl -s -o /dev/null -w "%{http_code}" --fail 127.0.0.1:5000
