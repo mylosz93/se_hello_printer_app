@@ -1,6 +1,7 @@
 # Simple Flask App
 [![Build Status](https://travis-ci.org/mylosz93/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/mylosz93/se_hello_printer_app)
 ![Uptime Status](https://app.statuscake.com/button/index.php?Track=5902163&Days=1&Design=1)
+
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
