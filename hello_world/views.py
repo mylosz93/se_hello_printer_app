@@ -7,23 +7,22 @@ moje_imie = "Milosz"
 msg = "Hello World!"
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    output = request.args.get('output')
-    name = request.args.get('name')
+    output = request.args.get("output")
+    name = request.args.get("name")
     if not output:
         output = PLAIN
     if not name:
         name = moje_imie
-    return get_formatted(msg, name,
-                         output.lower())
+    return get_formatted(msg, name, output.lower())
 
 
-@app.route('/outputs')
+@app.route("/outputs")
 def supported_output():
     return ", ".join(SUPPORTED)
 
 
-@app.route('/tests')
+@app.route("/tests")
 def print_tests():
-    return 'Uwielbiam weekendy!'
+    return "Uwielbiam weekendy!"

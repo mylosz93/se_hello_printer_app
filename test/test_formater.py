@@ -12,10 +12,9 @@ class TestFormater(unittest.TestCase):
         self.assertTrue(msg.isupper())
 
     def test_plain_to_xml(self):
-        name = 'Krysia'
-        msg = 'Hello'
+        name = "Krysia"
+        msg = "Hello"
         result = format_to_xml(msg, name)
         self.assertEqual(
-            result,
-            b'<greetings><name>Krysia</name><msg>Hello</msg></greetings>'
-            )
+            result, b"<greetings><name>Krysia</name><msg>Hello</msg></greetings>"
+        )
