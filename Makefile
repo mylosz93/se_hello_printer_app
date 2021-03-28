@@ -15,6 +15,9 @@ run:
 lint:
 	black hello_world test
 
+lint_check:
+	black --check hello_world test
+
 docker_build:
 	docker build -t hello-world-printer .
 
