@@ -1,3 +1,4 @@
+import json
 import unittest
 from hello_world import app
 from hello_world.formater import SUPPORTED
@@ -20,3 +21,9 @@ class FlaskrTestCase(unittest.TestCase):
     def test_message_output_with_name(self):
         rv = self.app.get("/?output=json&name=Anna")
         self.assertEqual(b'{"imie": "Anna", "msg": "Hello World!"}', rv.data)
+
+    def test_msg_with_output_json(self):
+        rv = self.app.get("/?output=json")
+        JSON_Datalist = json.loads(rv.data)
+        JSON_Result = {"imie": "Milosz", "msg": "Hello World!"}
+        self.assertDictEqual(JSON_Result, JSON_Datalist)
