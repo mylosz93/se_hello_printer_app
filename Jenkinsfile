@@ -43,3 +43,4 @@ pipeline {
                       zoomCoverageChart: false
         }
     }
+}
